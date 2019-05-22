@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+
+body{
+    background-color:black;
+    animation: image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+}
+
+@keyframes image{
+    0%{
+background-color:blue;
+}
+25%/{
+    background-color:red;
+}
+50%{
+    background-color:green;
+}
+75%{
+
+    background-color:pink;
+}
+100%{
+    background-color:yellow;
+    }
+  }  
+  
+  
+  
+  
+  
+</style>
+
+
+<body>
+<header>
+</header>
+<script>
+var id=0;
+
+function createT(){
+
+	var tb1 = document.getElementById("tb1");
+		
+		
+	for (var r=0; r<15; r++){
+	
+		var row = document.createElement("tr");
+		
+		for (var c=0; c<15; c++){
+			var cell = document.createElement("td");
+			
+			cell.width = "100px";
+			cell.height = "100px";
+			cell.id = id++;
+			
+			if (cell.id % 2 == 0){
+				cell.style.backgroundColor = "black";
+				
+			
+				
+			
+			}
+
+				row.appendChild(cell);
+				cell.innerHTML = id;
+			
+		
+		}
+	
+	tb1.appendChild(row);
+	
+	}
+	
+	
+	
+}
+
+
+
+</script>
+
+
+
+
+
+<body onload="createT()">
+
+	<table id="tb1" border="2px">
+	</table>
+
+</body>
+</html>

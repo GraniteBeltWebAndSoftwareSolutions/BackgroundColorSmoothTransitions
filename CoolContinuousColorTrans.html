@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body{
+    background-color:black;
+    animation: image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+}
+
+@keyframes image{
+    0%{
+background-color:blue;
+}
+25%/{
+    background-color:red;
+}
+50%{
+    background-color:green;
+}
+75%{
+
+    background-color:pink;
+}
+100%{
+    background-color:yellow;
+    }
+  }  
+  
+  
+  
+  
+  
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+jQuery(document).ready(function(){
+	jQuery(window).scroll(function(){
+		var winHe = jQuery(window).height();
+		var winSPosT =  jQuery(window).scrollTop();
+		var winSPosB = winHe + winSPosT;
+		jQuery(".status").html(winSPosT);
+		var t = "#" + winSPosT;
+		jQuery("body").css("background-color", "t");
+		console.log(t);
+		
+		if (winSPosT>100){
+			jQuery("body").css("background-color", "green");
+		};
+		if (winSPosT>900){
+			jQuery("body").css("background-color", "yellow");
+		};
+		if (winSPosT<100){
+			jQuery("body").css("background-color", "white");
+		};
+		if (winSPosT<900){
+			jQuery("body").css("background-color", "green");
+		};
+	});
+});
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+ 
